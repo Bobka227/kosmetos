@@ -4,8 +4,17 @@
     box-sizing: border-box;
 }
 
+@font-face { 
+    font-family: Arvo-Regular; 
+    src: url(Folder/Arvo-Regular.ttf); 
+}
+
+.visually-hidden {
+    display: none;
+}
+
 body {
-    font-family: 'Arvo', sans-serif;
+    font-family: "Arvo-Regular", sans-serif; 
     background-color: rgb(242, 228, 217);
 }
 
@@ -19,7 +28,7 @@ main {
 
 .head {
     display: flex;
-    background-color: rgb(255, 255, 255);
+    background-image: url(images/background-head.png);
     align-items: center;
     justify-content: center;
     width: 600px;
@@ -39,16 +48,24 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 600px;
     height: 363px;
     background-color: rgba(173, 141, 94, 1);
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-img {
+    margin: 40px 0 11px 0;
+}
+
 .web-title, .web-text {
     color: rgba(255, 255, 255, 1);
     text-align: center;
-    font-weight: 400;
 }
 
 .web-title {
@@ -56,19 +73,201 @@ main {
     width: 288px;
     height: 49px;
     line-height: 49px;
+    margin-bottom: 3px;
+    font-weight: 400;
 }
 
 .web-text {
     font-size: 20px;
     width: 539px;
     height: 50px;
-    line-height: 25px;
+    line-height: 24px;
+    margin-bottom: 34px;
+    font-weight: 200;
 }
 
-.info {}
+.web-btn { 
+    background-color: #AD8D5E; 
+    border-radius: 50px; 
+    border: 2px solid #FFFFFF;
+    padding: 8px 16px;
+} 
 
-.promocode {}
+.web-btn > a { 
+    text-decoration: none; 
+    font-family: "Arvo-Regular", sans-serif; 
+    font-weight: 700; 
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 200;
+}
 
-.order {}
+.info {
+    height: 597px;
+    width: 600px;
+}
 
-.footer {}
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.info-grid-el {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-grid-text {
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(30, 30, 30, 1);
+    line-height: 24px;
+}
+
+.info-text-1 {
+    margin: 88px 10px 87px 22px;
+}
+
+.info-text-2 {
+    margin: 39px 19px 36px 17px;
+}
+
+.el-1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.el-2 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.el-3 {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.el-4 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.promocode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+    width: 600px;
+    background-color: rgba(173, 141, 94, 1);
+}
+
+.promocode-text {
+    color: rgba(255, 255, 255, 1);
+    width: 539px;
+    height: 100px;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.order {
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    height: 390px;
+}
+
+.order-text {
+    font-size: 15px;
+    font-weight: 200;
+    color: rgba(113, 113, 113, 1);
+    line-height: 18px;
+    text-align: center;
+}
+
+.order-text-1 {
+    margin: 3px 0 29px 0;
+    width: 395px;
+    height: 19px;
+}
+
+.order-text-2 {
+    margin: 29px 0 39px 0;
+    width: 467px;
+    height: 76px;
+}
+
+.order-text-2 span {
+    font-weight: 700;
+}
+
+.order-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 29px;
+}
+
+.order-btn {
+    width: 272px;
+    border-radius: 30px; 
+    border: none;
+} 
+
+.order-btn > a { 
+    text-decoration: none; 
+    font-family: "Arvo-Regular", sans-serif; 
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.table {
+    text-align: center;
+}
+
+.btn_1 { 
+    background-color: rgba(255, 197, 73, 1); 
+    color: #422701;
+    padding: 17px 27px;
+} 
+
+.btn_2 { 
+    background-color: rgba(37, 211, 102, 1);
+    padding: 17px 82px;
+}
+
+.btn_1 > a { 
+    background-color: rgba(255, 197, 73, 1); 
+    color: #422701; 
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 1);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1-footer {
+    width: 367px;
+    font-size: 15px;
+    font-weight: 200;
+    color: rgba(30, 30, 30, 1);
+    text-align: center;
+    line-height: 18px;
+    margin-bottom: 19px;
+}
